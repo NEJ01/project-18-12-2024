@@ -1,0 +1,59 @@
+.food-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  /* 3 cards per row on medium to large screens */
+  .food-card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(33.333% - 20px); /* Ensures 3 cards per row with gaps */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .food-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .food-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .food-card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .food-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  
+  /* 2 cards per row on tablets (up to 768px) */
+  @media (max-width: 768px) {
+    .food-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  /* 1 card per row on mobile devices (up to 480px) */
+  @media (max-width: 480px) {
+    .food-card {
+      width: 100%;
+    }
+  }
+  
